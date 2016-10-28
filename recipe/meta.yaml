@@ -1,6 +1,6 @@
-{% set version = "1.4.0rc1" %}
+{% set version = "1.4.0" %}
 {% set org = "cyclus" %}
-{% set branch = "develop" %}
+{% set branch = "master" %}
 {% set sha256 = "29b553c4869cee7e6c3c86c683362a331c8a0532d6fc1893bfc5f41f28a5fa34" %}
 {% set variant = "openblas" %}
 
@@ -37,3 +37,5 @@ about:
 extra:
   recipe-maintainers:
     - scopatz
+    - gonuke
+    - baaaaam
