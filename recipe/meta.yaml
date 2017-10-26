@@ -26,6 +26,10 @@ requirements:
   run:
     - cyclus
 
+test:
+  source_files:
+    - tests
+
 about:
   home: http://fuelcycle.org/
   license: BSD 3-clause
