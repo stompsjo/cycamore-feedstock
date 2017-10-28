@@ -1,6 +1,4 @@
 {% set version = "1.5.0" %}
-{% set org = "cyclus" %}
-{% set branch = "1.5.0" %}
 {% set sha256 = "c7150ae9dfb40719a81a8c8afe3e7294cb6a3aa9fafca3601c061e1b712abc9f" %}
 {% set variant = "openblas" %}
 
@@ -10,12 +8,12 @@ package:
 
 source:
   fn: cycamore-{{ version }}-{{ sha256 }}.tar.gz
-  url: https://github.com/{{ org }}/cycamore/archive/{{ branch }}.tar.gz
+  url: https://github.com/cyclus/cycamore/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: True  # [win or not py35]
+  number: 1
+  skip: True  # [win or py34]
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -27,6 +25,10 @@ requirements:
     - cyclus
   run:
     - cyclus
+
+test:
+  source_files:
+    - tests
 
 about:
   home: http://fuelcycle.org/
