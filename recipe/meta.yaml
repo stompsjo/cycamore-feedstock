@@ -1,5 +1,5 @@
-{% set version = "1.5.0" %}
-{% set sha256 = "c7150ae9dfb40719a81a8c8afe3e7294cb6a3aa9fafca3601c061e1b712abc9f" %}
+{% set version = "1.5.3" %}
+{% set sha256 = "98087a8c6198b9fedabbee10abaec52c3e1521cc52055148b7294b386550e5b8" %}
 {% set variant = "openblas" %}
 
 package:
@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
-  skip: True  # [win or py34]
+  number: 0
+  skip: True  # [win or py27 or py34 or (osx and py35)]
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -24,6 +24,7 @@ requirements:
     - pkg-config
     - cyclus
   run:
+    - python
     - cyclus
 
 test:
