@@ -9,14 +9,14 @@ if [ "$(uname)" == "Darwin" ]; then
   skiprpath="-DCMAKE_SKIP_RPATH=TRUE"
 else
   libext=".so"
-  export LDFLAGS=" ${LDFLAGS} -Wl,-rpath,${PREFIX}/lib"
-  export LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
-  export LINKFLAGS="${LDFLAGS}"
+  #export LDFLAGS=" ${LDFLAGS} -Wl,-rpath,${PREFIX}/lib"
+  #export LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
+  #export LINKFLAGS="${LDFLAGS}"
   skiprpath=""
 fi
 
 # Install Cycamore
-export VERBOSE=1
+#export VERBOSE=1
 ${PYTHON} install.py --prefix="${PREFIX}" \
   --build_type="Release" \
   --dont-allow-milps \
