@@ -20,6 +20,8 @@ requirements:
   build:
     - cmake
     - pkg-config
+    - {{ compiler('cxx') }}
+  host:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
